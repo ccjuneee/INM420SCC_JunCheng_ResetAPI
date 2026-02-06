@@ -13,8 +13,7 @@ body {
 
 /* HERO */
 .hero {
-  padding: 80px 20px;
-  background: linear-gradient(180deg, #0b0f2b, #141a4f);
+  padding: 40px 20px;
 }
 
 .hero h1 {
@@ -27,6 +26,25 @@ body {
   margin-bottom: 30px;
 }
 
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.controls input[type="date"] {
+  height: 44px;
+  padding: 0 14px;
+  border-radius: 22px;
+  border: none;
+  font-size: 14px;
+  font-family: inherit;
+  background-color: #ffffff;
+  color: #111;
+}
+
 button {
   padding: 12px 26px;
   font-size: 16px;
@@ -37,6 +55,15 @@ button {
   cursor: pointer;
 }
 
+.controls button {
+  height: 44px;
+  padding: 0 22px;
+  border-radius: 22px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
 button:hover {
   opacity: 0.9;
 }
@@ -44,7 +71,7 @@ button:hover {
 /* CONTENT */
 .content {
   max-width: 900px;
-  margin: 60px auto;
+  margin: 30px auto;
   padding: 0 20px;
 }
 
