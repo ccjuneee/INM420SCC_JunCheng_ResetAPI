@@ -4,23 +4,23 @@ const date = document.querySelector("#date");
 const img = document.querySelector("#spaceImg");
 const description = document.querySelector("#description");
 
-const apiKey = "DEMO_KEY";
+const apiKey = "V1f7OXPAItwSZpJH6fpqLlrLfbcIjSj59Ua3yYcn";
 const url = `https://api.nasa.gov/planetary/apod?api_key=${apiKey}`;
 
 button.addEventListener("click", () => {
   fetch(url)
-    .then(response => response.json())
-    .then(data => {
+    .then((response) => response.json())
+    .then((data) => {
       title.innerText = data.title;
       date.innerText = data.date;
+      description.textContent = data.explanation;
 
-      if (data.media_type === "image") {
-        img.src = data.url;
-        img.style.display = "block";
-      } else {
-        img.style.display = "none";
-      }
-
-      description.innerText = data.explanation;
+      // ✅ 核心修复点
+      img.src = data.url;
+      img.style.display = "block"; // 强制显示
+      img.alt = data.title || "NASA Image";
+    })
+    .catch((err) => {
+      console.error(err);
     });
 });
