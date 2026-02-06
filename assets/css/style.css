@@ -64,6 +64,7 @@ button {
   font-weight: 500;
   cursor: pointer;
 }
+
 button:hover {
   opacity: 0.9;
 }
